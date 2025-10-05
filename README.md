@@ -86,11 +86,3 @@ Pastikan memeriksa file tersebut ketika menambahkan aset atau komponen pihak ket
 Untuk perubahan besar pada dependensi: sertakan catatan kompatibilitas dan cek build berjalan (`npm run build`).
 
 ---
-
-Jika mau, saya bisa bantu lanjutkan:
-
-- Mengunci versi yang sekarang menggunakan "*"
-- Menambahkan `CONTRIBUTING.md` dan `CODE_OF_CONDUCT.md`
-- Menambahkan skrip lint/typecheck dasar
-
-Beritahu fitur mana yang ingin Anda prioritaskan.
