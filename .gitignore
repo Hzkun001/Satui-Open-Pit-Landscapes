@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+.vite/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Optional cache files
+.cache/
+.parcel-cache/
+vite.config.ts.timestamp-*
+
+# Testing
+coverage/
+*.lcov
+
+# TypeScript
+*.tsbuildinfo
+
+# Local config (misal khusus user)
+*.local
+
+# Mac & Windows trash
+.Trashes
+ehthumbs.db
+desktop.ini
