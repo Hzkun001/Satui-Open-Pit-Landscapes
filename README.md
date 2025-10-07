@@ -18,7 +18,7 @@ Ringkasan: proyek ini menampilkan storytelling interaktif berbasis peta/satelit 
 
 ## Persyaratan
 
-- Node.js (rekomendasi: LTS — mis. 18/20)
+- Node.js (rekomendasi: LTS — mis. 19/20)
 - npm (atau yarn/pnpm sebagai alternatif)
 
 Periksa versi pada Windows PowerShell:
