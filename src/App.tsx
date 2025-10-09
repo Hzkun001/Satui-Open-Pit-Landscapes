@@ -102,7 +102,7 @@ export default function App() {
       subtitle: "SAR Imagery",
       date: "March 31, 2015 - Early Footprints",
       description:
-        "In March 2015, the Sentinel-1 VV image shows a medium gray texture with bright “islands” still scattered, indicating limited mining openings within a matrix of vegetation. The bright linear network (early haul roads/benches) appears short and segmented. Dark water patches appear locally in several depressions, indicating small, unconnected water bodies.",
+        "In March 2015, the Sentinel-1 VV image shows a medium gray texture with bright “lands” still scattered, indicating limited mining openings within a matrix of vegetation. The bright linear network (early haul roads/benches) appears short and segmented. Dark water patches appear locally in several depressions, indicating small, unconnected water bodies.",
       image: sarImage2015VV,
       legend: "Radar backscatter in the VV polarization",
     },
