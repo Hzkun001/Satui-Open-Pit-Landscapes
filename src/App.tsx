@@ -1440,10 +1440,9 @@ Having looked at a single moment, let's now turn back time. The animation below 
           {/* Gambar */}
           <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
             <ImageWithFallback
-              src="/src/image/time-series-new.gif"
-              alt="Time-series animation showing seasonal water change"
-              className="w-full max-w-3xl mx-auto object-contain"
-              loading="lazy"
+            src={timeSeriesGif}
+            alt="Time-series animation showing seasonal water change"
+            className="w-full h-auto rounded-xl shadow-lg mx-auto"
             />
           </div>
         
