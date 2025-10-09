@@ -723,7 +723,7 @@ export default function App() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-500">
                   Coal Mining's Environmental Impact | From The
-                  Ashes. Source:{" "}
+                  Ashes - National Geographic. Source:{" "}
                   <a
                     href="https://www.youtube.com/watch?v=ynN39sfqT8w"
                     target="_blank"
