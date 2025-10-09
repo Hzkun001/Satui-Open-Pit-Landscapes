@@ -1329,9 +1329,11 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
       <h2 className="text-3xl md:text-4xl mb-6 text-white">
         Seasonal Water
       </h2>
-        <p className="text-xl md:text-2xl text-gray-600">
+        <p className="text-xl md:text-2xl text-white">
           When the Pits Become Lakes
         </p>
+      <br></br>
+      <br></br>
       <div className="max-w-[700px] mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
           Like Alice in Through the Looking Glass, we jump to the year 2022. At the peak of the wet season (November 2022), the Satui mining depressions fill with water, forming pit lakes and sedimentation ponds that stand out in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
