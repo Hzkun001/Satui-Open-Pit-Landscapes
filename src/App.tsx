@@ -1316,117 +1316,142 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
         </div>
       </section>
 
-      {/* Seasonal Water - Comprehensive Section */}
-      <section
-        id="seasonal-water"
-        ref={setSectionRef("seasonal-water")}
-        className="relative bg-blue-900 py-16 md:py-24"
-      >
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl mb-6 text-white">
-              Seasonal Water
-            </h2>
-            <div className="max-w-[700px] mx-auto">
-              <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-Like Alice in Through the Looking Glass, we jump to the year 2022. At the peak of the wet season (November 2022), the Satui mining depressions fill with water, forming pit lakes and sedimentation ponds that stand out in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.              </p>
-            </div>
-          </div>
+{/* Seasonal Water - Comprehensive Section */}
+<section
+  id="seasonal-water"
+  ref={setSectionRef("seasonal-water")}
+  className="relative bg-blue-900 py-16 md:py-24"
+>
+  <div className="max-w-7xl mx-auto px-4 md:px-6">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl mb-6 text-white">
+        Seasonal Water
+      </h2>
+      <div className="max-w-[700px] mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+          Like Alice in Through the Looking Glass, we jump to the year 2022. At the peak of the wet season (November 2022), the Satui mining depressions fill with water, forming pit lakes and sedimentation ponds that stand out in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
+        </p>
+      </div>
+    </div>
 
-          {/* Main Content - Single Card Layout */}
-          <div className="max-w-4xl mx-auto mb-12">
-            {/* Wet/Dry Toggle Card - Full Width */}
-            <div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-                {/* Toggle Controls */}
-                <div className="flex items-center justify-center space-x-4 mb-8">
-                  <span className={!showWetSeason ? "font-medium text-white" : "text-blue-300"}>
-                    Dry
-                  </span>
-                  <Switch
-                    checked={showWetSeason}
-                    onCheckedChange={setShowWetSeason}
-                    className="data-[state=checked]:bg-blue-500"
-                  />
-                  <span className={showWetSeason ? "font-medium text-white" : "text-blue-300"}>
-                    Wet
-                  </span>
-                </div>
+    {/* Main Content - Single Card Layout */}
+    <div className="max-w-4xl mx-auto mb-20">
+      {/* Wet/Dry Toggle Card - Full Width */}
+      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
+        {/* Toggle Controls */}
+        <div className="flex items-center justify-center space-x-4 mb-8">
+          <span className={!showWetSeason ? "font-medium text-white" : "text-blue-300"}>
+            Dry
+          </span>
+          <Switch
+            checked={showWetSeason}
+            onCheckedChange={setShowWetSeason}
+            className="data-[state=checked]:bg-blue-500"
+          />
+          <span className={showWetSeason ? "font-medium text-white" : "text-blue-300"}>
+            Wet
+          </span>
+        </div>
 
-                {/* Main Image Display */}
-                <div className="relative mb-6">
-                  <div className="aspect-video rounded-xl overflow-hidden bg-black">
-                    <ImageWithFallback
-                      src={showWetSeason ? seasonalWaterWet : seasonalWaterDry}
-                      alt={showWetSeason ? "Wet season water coverage showing expanded water areas in mining pits" : "Dry season water coverage showing reduced water areas in mining pits"}
-                      className="w-full h-full object-cover transition-all duration-700 ease-in-out"
-                      loading="lazy"
-                    />
-                    
-                    {/* Season overlay */}
-                    <div className={`absolute inset-0 transition-all duration-1000 ${
-                      showWetSeason ? 'bg-blue-500/20' : 'bg-orange-500/20'
-                    }`} />
-                    
-                    {/* Season label */}
-                    <div className="absolute top-4 left-4">
-                      <div className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                        showWetSeason 
-                          ? 'bg-blue-500/80 text-white' 
-                          : 'bg-orange-500/80 text-white'
-                      }`}>
-                        {showWetSeason ? 'Wet Season (Nov, 2022)' : 'Dry Season (Jun, 2022)'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Caption */}
-                <div className="text-center mb-6">
-                  <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
-                    Wet vs Dry season water mask comparison showing seasonal variability in pit water coverage and the impact of monsoon patterns on mining area hydrology
-                  </p>
-                </div>
-
-                {/* Season Details */}
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Droplets className={`w-5 h-5 ${showWetSeason ? "text-blue-300" : "text-orange-300"}`} />
-                    <span className="text-sm text-blue-100">
-                      {showWetSeason
-                        ? "Heavy rainfall fills the mine pit"
-                        : "Low rainfall, high evaporation"}
-                    </span>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-blue-200 mb-2">Water Coverage</p>
-                    <Progress
-                      value={showWetSeason ? 45 : 15}
-                      className="w-full mb-2 bg-white/20"
-                    />
-                    <p className="text-xs text-blue-300">
-                      {showWetSeason ? "~45% of pit areas" : "~15% of pit areas"}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Additional Context Text */}
-                <div className="mt-8">
-                  <p className="text-base leading-relaxed text-blue-100 text-justify">
-                    But beyond visualization, these expanding pit lakes carry serious risks. When abandoned or poorly regulated, flooded mining pits can accumulate acidic, metal-rich water that is dangerous to surrounding ecosystems. Overflow during extreme monsoon rain may contaminate rivers, flood nearby communities, or damage farmland. Understanding the seasonal water dynamics with radar is therefore not only vital for monitoring land change but also for anticipating environmental and safety hazards in mining regions.
-                  </p>
-                </div>
+        {/* Main Image Display */}
+        <div className="relative mb-6">
+          <div className="aspect-video rounded-xl overflow-hidden bg-black">
+            <ImageWithFallback
+              src={showWetSeason ? seasonalWaterWet : seasonalWaterDry}
+              alt={showWetSeason ? "Wet season water coverage showing expanded water areas in mining pits" : "Dry season water coverage showing reduced water areas in mining pits"}
+              className="w-full h-full object-cover transition-all duration-700 ease-in-out"
+              loading="lazy"
+            />
+            
+            {/* Season overlay */}
+            <div className={`absolute inset-0 transition-all duration-1000 ${
+              showWetSeason ? 'bg-blue-500/20' : 'bg-orange-500/20'
+            }`} />
+            
+            {/* Season label */}
+            <div className="absolute top-4 left-4">
+              <div className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                showWetSeason 
+                  ? 'bg-blue-500/80 text-white' 
+                  : 'bg-orange-500/80 text-white'
+              }`}>
+                {showWetSeason ? 'Wet Season (Nov, 2022)' : 'Dry Season (Jun, 2022)'}
               </div>
             </div>
           </div>
         </div>
-      </section>
 
+        {/* Caption */}
+        <div className="text-center mb-6">
+          <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
+            Wet vs Dry season water mask comparison showing seasonal variability in pit water coverage and the impact of monsoon patterns on mining area hydrology
+          </p>
+        </div>
 
+        {/* Season Details */}
+        <div className="space-y-4">
+          <div className="flex items-center space-x-3">
+            <Droplets className={`w-5 h-5 ${showWetSeason ? "text-blue-300" : "text-orange-300"}`} />
+            <span className="text-sm text-blue-100">
+              {showWetSeason
+                ? "Heavy rainfall fills the mine pit"
+                : "Low rainfall, high evaporation"}
+            </span>
+          </div>
+          
+          <div>
+            <p className="text-sm text-blue-200 mb-2">Water Coverage</p>
+            <Progress
+              value={showWetSeason ? 45 : 15}
+              className="w-full mb-2 bg-white/20"
+            />
+            <p className="text-xs text-blue-300">
+              {showWetSeason ? "~45% of pit areas" : "~15% of pit areas"}
+            </p>
+          </div>
+        </div>
 
+        {/* Additional Context Text */}
+      </div>
+    </div>
 
+    {/* 🔹 Time-Series GIF Section (DI LUAR CARD, tapi masih dalam section) */}
+    <br>
+    </br>
+    <br>
+    </br>
+      <div className="max-w-4xl mx-auto mb-20">
+        <div className="max-w-[700px] mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+Having looked at a single moment, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) shows the gradual expansion of the pit and the seasonal pulse of water that repeats every year.      </p>
+      </div>
+      <br>
+      </br>
+      <br>
+      </br>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex justify-center">
+          <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
+        <img
+          src="/src/image/time-series-new.gif"
+          alt="Time-series animation showing seasonal water change"
+          className="w-full max-w-3xl mx-auto object-contain"
+          loading="lazy"
+        />
+      </div>
+      </div>
+      <br>
+      </br>
+      <br>
+      </br>
+        <div className="max-w-[700px] mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+        But beyond visualization, these expanding pit lakes carry serious risks. When abandoned or poorly regulated, flooded mining pits can accumulate acidic, metal-rich water that is dangerous to surrounding ecosystems. Overflow during extreme monsoon rain may contaminate rivers, flood nearby communities, or damage farmland. Understanding the seasonal water dynamics with radar is therefore not only vital for monitoring land change but also for anticipating environmental and safety hazards in mining regions.
+      </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Why Radar */}
       <section
@@ -1820,8 +1845,6 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
               </CardContent>
             </Card>
           </div>
-
-
         </div>
       </section>
     </div>
