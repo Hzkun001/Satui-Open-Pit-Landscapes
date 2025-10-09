@@ -1432,7 +1432,7 @@ Having looked at a single moment, let's now turn back time. The animation below 
       </br>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex justify-center">
           <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
-        <ImageWithFallback
+        <img
           src="src/image/time-series-new.gif"
           alt="Time-series animation showing seasonal water change"
           className="w-full max-w-3xl mx-auto object-contain"
