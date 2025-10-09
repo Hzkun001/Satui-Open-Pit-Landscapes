@@ -6,6 +6,7 @@ import { Slider } from "./components/ui/slider";
 import { Badge } from "./components/ui/badge";
 import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+import timeSeriesGif from "@/image/time-series-new.gif";
 import {
   floodingAerial,
   roadDamage,
@@ -1432,12 +1433,11 @@ Having looked at a single moment, let's now turn back time. The animation below 
       </br>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex justify-center">
           <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
-        <img
-          src="src/assets/time-series-new.gif"
-          alt="Time-series animation showing seasonal water change"
-          className="w-full max-w-3xl mx-auto object-contain"
-          loading="lazy"
-        />
+          <ImageWithFallback
+            src={timeSeriesGif}
+            alt="Time-series animation showing seasonal water change"
+            className="w-full h-auto rounded-xl shadow-lg mx-auto"
+          />
       </div>
       </div>
       <br>
