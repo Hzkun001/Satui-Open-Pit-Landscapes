@@ -1437,18 +1437,18 @@ Having looked at a single moment, let's now turn back time. The animation below 
       <br>
       </br>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex justify-center">
-          <div className="block rounded-xl overflow-hidden border border-white/20 shadow-lg">
+          <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
           <ImageWithFallback
             src={timeSeriesGif}
             alt="Time-series animation showing seasonal water change"
             className="w-full h-auto rounded-xl shadow-lg mx-auto"
           />
       </div>
-         <p className="text-blue-200 text-sm mt-4">
+      </div>
+                 <p className="text-blue-200 text-sm mt-4">
       Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in water coverage
       across the Satui open-pit landscape.
          </p>
-      </div>
       <br>
       </br>
       <br>
