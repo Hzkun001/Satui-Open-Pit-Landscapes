@@ -1102,6 +1102,11 @@ The theory becomes clearer when we see it directly. Use the slider below to comp
                     )}
                   </div>
                 </div>
+                  <div className="text-center mt-4">
+                    <p className="text-sm leading-[1.5] text-black-200 max-w-[800px] mx-auto">
+                   Comparison of SAR backscatter intensity (Sentinel-1 VV polarization) between March 31, 2015 (left) and October 3, 2025 (right).
+                    </p>
+                  </div>
               </div>
             </div>
           </div>
