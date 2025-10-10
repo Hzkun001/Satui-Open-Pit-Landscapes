@@ -96,6 +96,7 @@ export default function App() {
   { year: 2022, pitHa: 320.47, deltaHa: -28.50 },
   { year: 2023, pitHa: 290.07, deltaHa: -30.40 },
   { year: 2024, pitHa: 277.57, deltaHa: -12.50 },
+  { year: 2025, pitHa: 265.11, deltaHa: -12.46 },
 ];
 
   // Story steps for sidecar scrollytelling - Now with 3 slides only
@@ -1564,7 +1565,7 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
        Tracing a Decade of Expansion 
       </h2>
         <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 text-justify">
-          From 2015 to 2024, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
+          From 2015 to 2025, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
         </p>
       </div>
     </div>
