@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, Suspense } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
 import { Switch } from "./components/ui/switch";
+import { ResponsiveContainer, ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from "recharts";
 import { Slider } from "./components/ui/slider";
 import { Badge } from "./components/ui/badge";
 import { Progress } from "./components/ui/progress";
@@ -83,6 +84,19 @@ export default function App() {
   const [selectedYear, setSelectedYear] = useState(2025);
   const [selectedSeason, setSelectedSeason] = useState('wet');
 
+    // Story steps for sidecar scrollytelling - Now with 3 slides only
+  const pitData = [
+  { year: 2015, pitHa: 182.31, deltaHa: null as number | null },
+  { year: 2016, pitHa: 169.77, deltaHa: -12.54 },
+  { year: 2017, pitHa: 241.58, deltaHa: 71.81 },
+  { year: 2018, pitHa: 273.11, deltaHa: 31.53 },
+  { year: 2019, pitHa: 271.97, deltaHa: -1.14 },
+  { year: 2020, pitHa: 368.63, deltaHa: 96.66 },
+  { year: 2021, pitHa: 348.97, deltaHa: -19.66 },
+  { year: 2022, pitHa: 320.47, deltaHa: -28.50 },
+  { year: 2023, pitHa: 290.07, deltaHa: -30.40 },
+  { year: 2024, pitHa: 277.57, deltaHa: -12.50 },
+];
 
   // Story steps for sidecar scrollytelling - Now with 3 slides only
   const storySteps = [
@@ -1339,9 +1353,9 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
         </p>
       <br></br>
       <br></br>
-      <div className="max-w-[700px] mx-auto">
+     <div className="max-w-[700px] mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-          Like Alice in Through the Looking Glass, we jump to the year 2022. At the peak of the wet season (November 2022), the Satui mining depressions fill with water, forming pit lakes and sedimentation ponds that stand out in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
+          Like Alice stepping through the looking glass, we travel through time watching the Satui landscape transform as the seasons turn. During the wet monsoon, mining depressions fill with water, forming pit lakes and sedimentation ponds that gleam distinctly in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
         </p>
       </div>
     </div>
@@ -1435,40 +1449,124 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
       <div className="max-w-4xl mx-auto mb-20">
         <div className="max-w-[700px] mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-Having looked at a single moment, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) shows the gradual expansion of the pit and the seasonal pulse of water that repeats every year.      </p>
+Having observed a single wet season snapshot, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) reveals how both pit expansion and seasonal water pulses evolve across years. </p>
       </div>
       <br>
       </br>
       <br>
       </br>
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex flex-col items-center">
-          {/* Gambar */}
-          <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
-            <ImageWithFallback
-            src={timeSeriesGif}
-            alt="Time-series animation showing seasonal water change"
-            className="w-full h-auto rounded-xl shadow-lg mx-auto"
-            />
-          </div>
-        
-          {/* Caption */}
-          <div className="text-center mt-4">
-            <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">     
+<div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex flex-col items-center">
+  {/* Gambar */}
+                     {/* Legend - Enhanced */}
+                    <div className="  absolute top-2 left-4 -translate-x-3 bg-white/95 backdrop-blur-sm text-gray-900 px-4 py-3 rounded-lg text-xs border border-gray-200 shadow-lg">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className="text-gray-900 font-medium">High</span>
+                        <div className="w-10 h-2 bg-gradient-to-r from-white to-gray-500 rounded border border-gray-300"></div>
+                        <span className="text-gray-600 font-medium">Low</span>
+                      </div>
+                      <p className="text-center text-gray-600 text-xs">
+                        SAR Backscatter Intensity
+                      </p>
+                      <p className="text-center text-blue-600 text-xs mt-1">
+                        Sentinel-1 VV Polarization
+                      </p>
+                    </div>
+  <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
+    <ImageWithFallback
+      src="{timeSeriesGif}"
+      alt="Time-series animation showing seasonal water change"
+      className="w-full h-auto rounded-xl shadow-lg mx-auto"
+    />
+  </div>
+  
+
+  {/* Caption */}
+  <div className="text-center mt-4">
+    <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
 Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in water coverage across the Satui open-pit landscape.
-            </p>
+    </p>
+  </div>
+</div>
+
+      <br>
+      </br>
+      <br>
+      </br>
+
+    </div>
+  </div>
+  <br></br>
+  <br></br>
+             {/* 2 Column Layout: Text Left, Image Right */}
+  {/* ✅ NEW WRAPPER: tambah padding kiri-kanan & batasi lebar */}
+  <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+      {/* Left Column - Text Content */}
+            {/* Right Column - SAR Backscatter Image */}
+ <div className="rounded-xl border border-black/5 bg-white shadow-lg">
+  <div className="border-b border-black/5 px-5 py-4">
+    <h3 className="text-lg text-center font-semibold text-slate-900">
+      Open-Pit Area & Year-over-Year Change (2015–2025)
+    </h3>
+    <p className="text-sm text-center text-slate-500">
+      Bar: Total seasonal water area (ha), Line: annual change (Δ ha).
+    </p>
+  </div>
+
+  {/* 👉 beri tinggi eksplisit di container Recharts */}
+  <div className="w-full p-4">
+    <ResponsiveContainer width="100%" height={320}>
+      <ComposedChart data={pitData} margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="year" tick={{ fontSize: 12 }} tickMargin={6} interval={0} />
+        <YAxis yAxisId="left" tick={{ fontSize: 12 }} tickFormatter={(v) => `${v} ha`} />
+        <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12 }} tickFormatter={(v) => `${v} ha`} />
+        <Tooltip
+          formatter={(val: any, name: string) =>
+            name.includes("Δ")
+              ? [`${Number(val).toFixed(2)} ha`, "Δ From the previous year"]
+              : [`${Number(val).toFixed(2)} ha`, "Water area"]
+          }
+          labelFormatter={(label) => `${label}`}
+        />
+        <Legend />
+        {/* warna agar kontras */}
+        <Bar yAxisId="left" dataKey="pitHa" name="Water area (ha)" radius={[6, 6, 0, 0]} fill="#1b4da3ff" />  
+        <Line
+  yAxisId="right"
+  type="monotone"
+  dataKey="deltaHa"
+  name="Δ ha (YoY)"
+  dot={{ r: 3 }}
+  strokeWidth={2}
+  stroke="#1f2937"
+/>
+      </ComposedChart>
+    </ResponsiveContainer>
+            </div>
+            <div className="px-5 pb-5 text-center text-sm leading-relaxed text-blue-900/70">
+              The area estimate is derived from the segmentation of green areas in each 
+              <p>
+                image against the total study area (7,311 ha).
+                </p>
+            </div>
+            <br></br>
           </div>
-        </div>
-      <br>
-      </br>
-      <br>
-      </br>
-        <div className="max-w-[700px] mx-auto">
-        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-        But beyond visualization, these expanding pit lakes carry serious risks. When abandoned or poorly regulated, flooded mining pits can accumulate acidic, metal-rich water that is dangerous to surrounding ecosystems. Overflow during extreme monsoon rain may contaminate rivers, flood nearby communities, or damage farmland. Understanding the seasonal water dynamics with radar is therefore not only vital for monitoring land change but also for anticipating environmental and safety hazards in mining regions.
-      </p>
+      <div>
+        <h2 className="text-3xl md:text-4xl mb-6 text-white">
+       Tracing a Decade of Expansion 
+      </h2>
+        <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 text-justify">
+          From 2015 to 2024, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
+        </p>
       </div>
     </div>
   </div>
+          <div className="max-w-[700px] mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+Beyond visualization, these expanding pit lakes pose environmental risks. When unmanaged, they can store acidic, metal-rich water harmful to ecosystems. During heavy monsoon rain, overflow may contaminate rivers or nearby communities. Understanding these seasonal dynamics through radar is vital not only for monitoring land change but for anticipating environmental and safety hazards in tropical mining regions.
+      </p>
+      </div>
 </section>
 
       {/* Why Radar */}
