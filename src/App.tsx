@@ -1473,7 +1473,7 @@ Having observed a single wet season snapshot, let's now turn back time. The anim
                     </div>
   <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
     <ImageWithFallback
-      src="{timeSeriesGif}"
+      src={timeSeriesGif}
       alt="Time-series animation showing seasonal water change"
       className="w-full h-auto rounded-xl shadow-lg mx-auto"
     />
