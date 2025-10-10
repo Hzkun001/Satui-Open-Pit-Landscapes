@@ -1351,9 +1351,13 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
   <div className="max-w-7xl mx-auto px-4 md:px-6">
     {/* Section Header */}
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl mb-6 text-white">
+     <h2 className="text-3xl md:text-4xl mb-6 text-white">
         Seasonal Water
       </h2>
+                 <p className="text-xl md:text-2xl text-white">
+                      When the Pits Become Lakes
+                  </p>
+                  <br></br>
      <div className="max-w-4xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
           Like Alice stepping through the looking glass, we travel through time watching the Satui landscape transform as the seasons turn. During the wet monsoon, mining depressions fill with water, forming pit lakes and sedimentation ponds that gleam distinctly in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
@@ -1450,7 +1454,7 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
       <div className="max-w-4xl mx-auto mb-20">
         <div className="max-w-4xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-Having observed a single wet season snapshot, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) reveals how both pit expansion and seasonal water pulses evolve across years. </p>
+Having observed a single wet season snapshot, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) reveals how both pit expansion and seasonal water pulses evolve across years, illustrating not only the progressive growth of mining areas but also the rhythmic fluctuation of water bodies influenced by monsoon patterns. Over the decade, subtle changes in radar backscatter intensity highlight transitions between exposed surfaces, vegetated zones, and water-filled pits, offering a dynamic view of how mining operations and natural hydrological cycles continuously reshape the landscape.</p>
       </div>
       <br>
       </br>
@@ -1496,8 +1500,12 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
 
     </div>
   </div>
-  <br></br>
-  <br></br>
+           <div className="max-w-5xl mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+Over time, the changing patterns of the water area reveal more than temporary fluctuations, they capture how hydrological dynamics within and around the mine have shifted over the years. By quantifying these changes, we can see how the extent of seasonal water bodies has varied across the decade, reflecting both natural monsoon cycles and human-induced landscape alteration.      </p>
+      </div>
+      <br></br> 
+      <br></br>
              {/* 2 Column Layout: Text Left, Image Right */}
   {/* ✅ NEW WRAPPER: tambah padding kiri-kanan & batasi lebar */}
   <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
@@ -1563,7 +1571,7 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
       </div>
     </div>
   </div>
-          <div className="max-w-[700px] mx-auto">
+          <div className="max-w-5xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
 Beyond visualization, these expanding pit lakes pose environmental risks. When unmanaged, they can store acidic, metal-rich water harmful to ecosystems. During heavy monsoon rain, overflow may contaminate rivers or nearby communities. Understanding these seasonal dynamics through radar is vital not only for monitoring land change but for anticipating environmental and safety hazards in tropical mining regions.
       </p>
