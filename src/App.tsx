@@ -1552,6 +1552,11 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
             </div>
             <br></br>
           </div>
+              <div className="max-w-[700px] mx-auto">
+        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+          Over time, these seasonal rhythms reveal more than fleeting changes, they trace the mine’s evolving footprint year after year. To understand this long-term transformation, we can quantify how much the open-pit area has grown throughout the decade.
+        </p>
+      </div>
       <div>
         <h2 className="text-3xl md:text-4xl mb-6 text-white">
        Tracing a Decade of Expansion 
