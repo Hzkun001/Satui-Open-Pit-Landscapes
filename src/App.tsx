@@ -5,6 +5,7 @@ import { Switch } from "./components/ui/switch";
 import { ResponsiveContainer, ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from "recharts";
 import { Slider } from "./components/ui/slider";
 import { Badge } from "./components/ui/badge";
+import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import timeSeriesGif from "@/image/time-series-new.gif";
 import {
@@ -83,7 +84,8 @@ export default function App() {
   const [selectedYear, setSelectedYear] = useState(2025);
   const [selectedSeason, setSelectedSeason] = useState('wet');
 
-    // Story steps for sidecar scrollytelling - Now with 3 slides only
+
+  // Story steps for sidecar scrollytelling - Now with 3 slides only
   const pitData = [
   { year: 2015, pitHa: 182.31, deltaHa: null as number | null },
   { year: 2016, pitHa: 169.77, deltaHa: -12.54 },
@@ -98,7 +100,6 @@ export default function App() {
   { year: 2025, pitHa: 265.11, deltaHa: -12.46 },
 ];
 
-  // Story steps for sidecar scrollytelling - Now with 3 slides only
   const storySteps = [
     {
       id: "overview",
@@ -116,7 +117,7 @@ export default function App() {
       subtitle: "SAR Imagery",
       date: "March 31, 2015 - Early Footprints",
       description:
-        "In March 2015, the Sentinel-1 VV image shows a medium gray texture with bright “lands” still scattered, indicating limited mining openings within a matrix of vegetation. The bright linear network (early haul roads/benches) appears short and segmented. Dark water patches appear locally in several depressions, indicating small, unconnected water bodies.",
+        "In March 2015, the Sentinel-1 VV image shows a medium gray texture with bright “islands” still scattered, indicating limited mining openings within a matrix of vegetation. The bright linear network (early haul roads/benches) appears short and segmented. Dark water patches appear locally in several depressions, indicating small, unconnected water bodies.",
       image: sarImage2015VV,
       legend: "Radar backscatter in the VV polarization",
     },
@@ -737,7 +738,7 @@ export default function App() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-500">
                   Coal Mining's Environmental Impact | From The
-                  Ashes - National Geographic. Source:{" "}
+                  Ashes. Source:{" "}
                   <a
                     href="https://www.youtube.com/watch?v=ynN39sfqT8w"
                     target="_blank"
@@ -783,7 +784,6 @@ export default function App() {
                SAR radar imagery allows us to see beyond the Earth’s surface.
 By interpreting the patterns of signal reflections, we can reveal landscape changes caused by open-pit mining activities as well as the seasonal water dynamics inside the pits. Areas affected by mine expansion, rainwater accumulation, and surrounding vegetation can be distinguished based on the brightness level (backscatter) in radar images. By comparing imagery from different time periods, these changes can be accurately monitored even under persistent cloud cover.
               </p>
-
 
             </div>
 
@@ -1116,13 +1116,15 @@ The theory becomes clearer when we see it directly. Use the slider below to comp
                     )}
                   </div>
                 </div>
-                  <div className="text-center mt-4">
-                    <p className="text-sm leading-[1.5] text-black-200 max-w-[800px] mx-auto">
-                   Comparison of SAR backscatter intensity (Sentinel-1 VV polarization) between March 31, 2015 (left) and October 3, 2025 (right).
-                    </p>
-                  </div>
+                     <div className="text-center mt-4">
+    <p className="text-sm leading-[1.5] text-black-200 max-w-[800px] mx-auto">
+   Comparison of SAR backscatter intensity (Sentinel-1 VV polarization) between March 31, 2015 (left) and October 3, 2025 (right).
+    </p>
+  </div>
               </div>
             </div>
+          </div>
+          <div>
           </div>
         </div>
 
@@ -1324,9 +1326,13 @@ Compared to 2015, the 2025 image shows clear pit expansion: bright areas have wi
             ))}
           </div>
         </div>
+<br></br>
+<br></br>
+<br></br>
+        
 
         {/* Transition Block: Land Change → Seasonal Water */}
-        <div className="relative bg-white py-12 md:py-16">
+        <div className="relative bg-white py-1 md:py-1">
           <div className="max-w-4xl mx-auto px-4 md:px-6">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8 shadow-lg">
               <p className="text-base md:text-lg text-gray-800 leading-relaxed text-justify">
@@ -1348,12 +1354,7 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
       <h2 className="text-3xl md:text-4xl mb-6 text-white">
         Seasonal Water
       </h2>
-        <p className="text-xl md:text-2xl text-white">
-          When the Pits Become Lakes
-        </p>
-      <br></br>
-      <br></br>
-     <div className="max-w-[700px] mx-auto">
+     <div className="max-w-4xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
           Like Alice stepping through the looking glass, we travel through time watching the Satui landscape transform as the seasons turn. During the wet monsoon, mining depressions fill with water, forming pit lakes and sedimentation ponds that gleam distinctly in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
         </p>
@@ -1447,9 +1448,9 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
     <br>
     </br>
       <div className="max-w-4xl mx-auto mb-20">
-        <div className="max-w-[700px] mx-auto">
+        <div className="max-w-4xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-Having observed a single wet season snapshot, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) reveals how both pit expansion and seasonal water pulses evolve across years — illustrating not only the progressive growth of mining areas but also the rhythmic fluctuation of water bodies influenced by monsoon patterns. Over the decade, subtle changes in radar backscatter intensity highlight transitions between exposed surfaces, vegetated zones, and water-filled pits, offering a dynamic view of how mining operations and natural hydrological cycles continuously reshape the landscape. </p>
+Having observed a single wet season snapshot, let's now turn back time. The animation below (2015–2025, Sentinel-1 VV) reveals how both pit expansion and seasonal water pulses evolve across years. </p>
       </div>
       <br>
       </br>
@@ -1495,12 +1496,6 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
 
     </div>
   </div>
-  <br></br>
-          <div className="max-w-[700px] mx-auto">
-        <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-          Over time, these seasonal rhythms reveal more than fleeting changes, they trace the mine’s evolving footprint year after year. To understand this long-term transformation, we can quantify how much the open-pit area has grown throughout the decade.
-        </p>
-      </div>
   <br></br>
   <br></br>
              {/* 2 Column Layout: Text Left, Image Right */}
@@ -1558,13 +1553,12 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
             </div>
             <br></br>
           </div>
-
       <div>
         <h2 className="text-3xl md:text-4xl mb-6 text-white">
        Tracing a Decade of Expansion 
       </h2>
         <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 text-justify">
-          From 2015 to 2025, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
+          From 2015 to 2024, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
         </p>
       </div>
     </div>
@@ -1573,7 +1567,7 @@ Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in w
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
 Beyond visualization, these expanding pit lakes pose environmental risks. When unmanaged, they can store acidic, metal-rich water harmful to ecosystems. During heavy monsoon rain, overflow may contaminate rivers or nearby communities. Understanding these seasonal dynamics through radar is vital not only for monitoring land change but for anticipating environmental and safety hazards in tropical mining regions.
       </p>
-      </div>
+      </div> 
 </section>
 
       {/* Why Radar */}
@@ -1684,7 +1678,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        Radar Polarization Configurations (H = Horizontal, V = Vertical) (Credit: NASA SAR Handbook)
+                        Radar Polarization Configurations (H = Horizontal, V = Vertical)
                       </p>
                     </div>
                   </div>
@@ -1699,7 +1693,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        SAR Scattering Mechanisms in Forest Environments (Credit: NASA SAR Handbook)
+                        SAR Scattering Mechanisms in Forest Environments
                       </p>
                     </div>
                   </div>
