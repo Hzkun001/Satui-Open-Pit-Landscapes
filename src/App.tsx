@@ -1563,10 +1563,10 @@ Over time, the changing patterns of the water area reveal more than temporary fl
           </div>
       <div>
         <h2 className="text-3xl md:text-4xl mb-6 text-white">
-       Tracing a Decade of Expansion 
+       Tracing a Decade of Water Dynamics
       </h2>
         <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 text-justify">
-          From 2015 to 2024, the Satui open-pit mine shows a dynamic cycle of growth and slowdown. Pit area peaked sharply in 2020, marking a phase of intense excavation before stabilizing in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how mining reshaped nearly 7,311 hectares of landscape, revealing how extraction and environment continuously interact beneath Kalimantan’s cloudy skies.
+From 2015 to 2024, the Satui open-pit landscape reveals a shifting pattern of water expansion and retreat. Water-covered areas peaked during the wet season of 2022, forming extensive pit lakes and sedimentation ponds before gradually receding in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how rainfall, excavation, and drainage continuously reshaped the hydrological footprint within the 7,311-hectare mining corridor, illustrating the complex interplay between extraction and seasonal water beneath Kalimantan’s cloudy skies.
         </p>
       </div>
     </div>
