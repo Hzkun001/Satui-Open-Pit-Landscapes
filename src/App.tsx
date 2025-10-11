@@ -1360,7 +1360,7 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
                   <br></br>
      <div className="max-w-4xl mx-auto">
         <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-          Like Alice stepping through the looking glass, we travel through time watching the Satui landscape transform as the seasons turn. During the wet monsoon, mining depressions fill with water, forming pit lakes and sedimentation ponds that gleam distinctly in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2022 data to show how monsoon rainfall expands water coverage across the mining area.
+          Like Alice stepping through the looking glass, we travel through time watching the Satui landscape transform as the seasons turn. During the wet monsoon, mining depressions fill with water, forming pit lakes and sedimentation ponds that gleam distinctly in radar imagery. Below, you can toggle Wet–Dry to compare Sentinel-1 SAR (VV polarization) images between the wet and dry seasons. This visualization uses 2020 data to show how monsoon rainfall expands water coverage across the mining area.
         </p>
       </div>
     </div>
@@ -1566,7 +1566,7 @@ Over time, the changing patterns of the water area reveal more than temporary fl
        Tracing a Decade of Water Dynamics
       </h2>
         <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-8 text-justify">
-From 2015 to 2024, the Satui open-pit landscape reveals a shifting pattern of water expansion and retreat. Water-covered areas peaked during the wet season, forming extensive pit lakes and sedimentation ponds before gradually receding in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how rainfall, excavation, and drainage continuously reshaped the hydrological footprint within the 7,311-hectare mining corridor, illustrating the complex interplay between extraction and seasonal water beneath Kalimantan’s cloudy skies.
+From 2015 to 2025, the Satui open-pit landscape reveals a shifting pattern of water expansion and retreat. Water-covered areas peaked during the wet season, forming extensive pit lakes and sedimentation ponds before gradually receding in later years. Each estimate, derived from Sentinel-1 SAR segmentation, maps how rainfall, excavation, and drainage continuously reshaped the hydrological footprint within the 7,311-hectare mining corridor, illustrating the complex interplay between extraction and seasonal water beneath Kalimantan’s cloudy skies.
         </p>
       </div>
     </div>
