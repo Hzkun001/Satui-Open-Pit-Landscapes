@@ -1488,7 +1488,7 @@ Having observed a single wet season snapshot, let's now turn back time. The anim
   {/* Caption */}
   <div className="text-center mt-4">
     <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
-Animated time-series visualization (Sentinel-1 SAR) showing monthly changes in water coverage across the Satui open-pit landscape.
+Animated time series visualization (Sentinel-1 SAR) showing annual changes in water coverage across the Satui open pit mine landscape.
     </p>
   </div>
 </div>
