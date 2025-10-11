@@ -1406,7 +1406,7 @@ Pit expansion and new overburden piles not only reshape the surface, the resulti
                   ? 'bg-blue-500/80 text-white' 
                   : 'bg-orange-500/80 text-white'
               }`}>
-                {showWetSeason ? 'Wet Season (Nov, 2022)' : 'Dry Season (Jun, 2022)'}
+                {showWetSeason ? 'Wet Season (Nov, 2020)' : 'Dry Season (Jun, 2020)'}
               </div>
             </div>
           </div>
