@@ -1905,7 +1905,10 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     </div>
                   </div>
                 </div>
-                <br></br>
+               </div>
+             </div>
+            </div>
+                  <br></br>
                       <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 mb-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Left Column - SAR Frequency Bands Diagram */}
@@ -1967,7 +1970,6 @@ By layering NDVI over radar imagery, we can see not only where the mine grows, b
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* References & Resources */}
