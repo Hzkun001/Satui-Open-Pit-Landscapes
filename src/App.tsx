@@ -12,6 +12,8 @@ import vegetationGif from "@/image/vegetation.gif";
 import rumahRobohJPEG from "@/image/rumah_roboh.jpeg";
 import kasianJPG from "@/image/kasian.jpg";
 import reklamasiJPG from "@/image/reklamasi.jpg";
+import ndviPNG from "@/image/ndvi.png"; 
+import lowHighPNG from "@/image/low-high-ndvi.jpg"; 
 import {
   floodingAerial,
   roadDamage,
@@ -1902,6 +1904,65 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                       </p>
                     </div>
                   </div>
+                </div>
+                <br></br>
+                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 mb-8">
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                {/* Left Column - SAR Frequency Bands Diagram */}
+                <div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <ImageWithFallback
+                      src={lowHighPNG}
+                      alt="SAR frequency bands diagram showing P, L, S, C, and X bands across radio frequencies, microwaves, and infrared spectrum with frequency ranges from 0.3 to 12 GHz - Credit: NASA SAR Handbook"
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                    <div className="mt-4 text-center">
+                      <p className="text-xs text-gray-500">
+                        SAR Frequency Bands (Credit: NASA SAR Handbook)
+                      </p>
+                    </div>
+                  </div>
+                  <br></br>
+                        <div className="bg-white rounded-xl p-6 shadow-lg">
+                    <ImageWithFallback
+                      src={ndviPNG}
+                      alt="SAR frequency bands diagram showing P, L, S, C, and X bands across radio frequencies, microwaves, and infrared spectrum with frequency ranges from 0.3 to 12 GHz - Credit: NASA SAR Handbook"
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                    <div className="mt-4 text-center">
+                      <p className="text-xs text-gray-500">
+                        SAR Frequency Bands (Credit: NASA SAR Handbook)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Text Content */}
+                <div className="text-base md:text-xl lg:text-2xl space-y-6 text-gray-200 leading-relaxed">
+                     <h3 className="text-2xl mb-8 text-white">
+                NDVI (Normalized Difference Vegetation Index)
+              </h3>
+                  <p className="text-justify">
+                    While radar reveals the shape and texture of the mine, NDVI exposes the green heartbeat of the landscape. Derived from optical satellite data, NDVI compares how much red and near-infrared light plants absorb and reflect a simple ratio that tells a powerful story about life on the ground.
+
+In Satui, NDVI highlights how vegetation retreats as mining expands. Healthy plants, rich in chlorophyll, reflect near-infrared light strongly and appear bright green in NDVI maps. Bare soil and exposed rock, by contrast, return low or even negative values, marking areas stripped of life.
+                  </p >
+
+                  <p className="text-justify">
+                  Each color range in NDVI from pale yellow to deep green represents a stage in this transformation:
+
+−1 to 0 → barren surfaces or dead vegetation,
+
+0 to 0.33 → stressed or unhealthy plants,
+
+0.33 to 0.66 → moderately healthy growth,
+
+0.66 to 1 → lush, thriving vegetation,
+
+By layering NDVI over radar imagery, we can see not only where the mine grows, but how the surrounding ecosystem responds revealing the silent trade-off between extraction and regeneration across the Satui corridor.
+                  </p>
                 </div>
               </div>
             </div>
