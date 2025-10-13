@@ -708,7 +708,7 @@ export default function App() {
                 Seasonal Water Dynamics
               </h3>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
-          The tropical climate brings not just rain, but a rhythm of life. With annual rainfall reaching 2,000–3,000 mm, vast mining pits often turn into seasonal lakes. These water bodies are not merely visual phenomena, they represent complex interactions between climate, geology, and human activities that require scientific understanding.
+          The tropical climate brings not just rain, but a rhythm of life. With annual rainfall reaching 2.000–3.000 mm, vast mining pits often turn into seasonal lakes. These water bodies are not merely visual phenomena, they represent complex interactions between climate, geology, and human activities that require scientific understanding.
               </p>
 
               <div className="space-y-4">
@@ -719,7 +719,7 @@ export default function App() {
                       Monsoon Patterns
                     </h4>
                     <p className="text-sm text-gray-600">
-                     Annual rainfall of 2,000–3,000 mm with strong seasonal variability.
+                     Annual rainfall of 2.000–3.000 mm with strong seasonal variability.
                     </p>
                   </div>
                 </div>
