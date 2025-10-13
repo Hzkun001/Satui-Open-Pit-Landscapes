@@ -9,9 +9,9 @@ import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import timeSeriesGif from "@/image/time-series-new.gif";
 import vegetationGif from "@/image/vegetation.gif"; 
-import rumahRobohJPEG from "@/image/rumah_roboh.jpeg"; 
-import kasianJPG from "@/image/kasian.jpg"; 
-import reklamasiJPG from "@/image/reklamasi.jpg"; 
+import rumahRobohJPEG from "@/image/rumah_roboh.jpeg";
+import kasianJPG from "@/image/kasian.jpg";
+import reklamasiJPG from "@/image/reklamasi.jpg";
 import {
   floodingAerial,
   roadDamage,
@@ -1729,39 +1729,69 @@ Beyond visualization, these expanding pit lakes pose environmental risks. When u
     </p>
 <br></br>
     {/* Image grid */}
-    <div className="grid md:grid-cols-2 gap-6 mb-12">
-      <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-      <ImageWithFallback 
-        src={kasianJPG} 
-        className="rounded-xl shadow-lg" 
-        alt="Flood rescue operation" />
-        <div className="text-center mt-4">
-    <p className="text-sm leading-[1.6] text-blue-200 max-w-[200px] mx-auto">
-Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
+    <figure className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
+      <ImageWithFallback
+        src={kasianJPG}
+        className="rounded-xl shadow-lg"
+        alt="Flood rescue operation"
+      />
+      <figcaption className="text-center mt-4 text-sm leading-[1.6] text-blue-200 max-w-[260px] mx-auto">
+        Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
+      </figcaption>
+    </figure>
+  
+    <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+      When excavation alters natural drainage, nearby villages face recurrent floods. Families
+      evacuate as muddy water enters their homes, carrying silt and debris from exposed slopes.
+      Some homes, built too close to unstable ground, have collapsed into abandoned pits. These
+      are not isolated events—they reveal how mining reshapes hydrology, weakens soil, and
+      heightens risk. Each flood is more than a natural event; it signals a disrupted balance
+      between people and the land they depend on.
     </p>
   </div>
-      </div>
-          <p className="text-xl leading-[1.6] text-blue-200 text-justify">
- When excavation alters natural drainage, nearby villages face recurrent floods. Families evacuate as muddy water enters their homes, carrying silt and debris from exposed slopes. In low-lying areas, wooden houses stand half-submerged, their walls soaked by rising floodwater. Some homes, built too close to unstable ground, have collapsed entirely into abandoned pits, leaving behind only twisted roofs and scattered belongings. These are not isolated events they are visible reminders of how mining reshapes hydrology, weakens soil, and increases risk. Over time, the altered terrain amplifies runoff, while clogged drainage channels turn rainfall into flash floods. Each inundation is not only a natural event but a reflection of disrupted balance between people, land, and the forces they once relied on for stability.
+  
+  <div className="grid md:grid-cols-2 gap-6 mb-12">
+    <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+      Abandoned pits often collect acidic, metal-rich water, slowly poisoning the soil and nearby
+      rivers. Over time, these stagnant pools accumulate heavy metals and sediments, altering
+      groundwater and reducing soil fertility. These dark patches—clearly visible from space—mark
+      the long-term scars of extraction and neglected reclamation. Without proper intervention,
+      they threaten aquatic life, spread pollutants downstream, and disrupt natural river flow.
     </p>
-    </div>
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-      <p className="text-xl leading-[1.6] text-blue-200 text-justify">
-        Abandoned pits often collect acidic, metal-rich water, slowly poisoning the soil and nearby rivers. Over time, these stagnant pools accumulate sediments and heavy metals, altering groundwater chemistry and reducing the fertility of surrounding land. These dark patches, clearly visible from space mark the long-term scars of extraction and neglected reclamation. Without proper intervention, they threaten aquatic ecosystems, spread pollutants downstream, and disrupt the natural flow of rivers. What remains is not just a scar on the landscape, but a lingering environmental hazard that persists long after mining operations cease, silently shaping the lives and livelihoods of those who remain nearby.
-    </p>
-    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-    <ImageWithFallback 
-      src={rumahrobohJPEG} 
-      className="rounded-xl shadow-lg" 
-      alt="Collapsed house near mining pit" />
-      <div className="text-center mt-4">
-    <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
-Collapsed houses near a mining pit in Satui, 
-<p> South Kalimantan (Jejakrekam.com, 2022).</p>
-    </p>
+  
+    <figure className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
+      <ImageWithFallback
+        src={rumahRobohJPEG}   // <-- konsisten dengan import
+        className="rounded-xl shadow-lg"
+        alt="Collapsed house near mining pit"
+      />
+      <figcaption className="text-center mt-4 text-sm leading-[1.6] text-blue-200 max-w-[600px] mx-auto">
+        Collapsed houses near a mining pit in Satui, South Kalimantan (Jejakrekam.com, 2022).
+      </figcaption>
+    </figure>
   </div>
+  
+  <p className="text-xl leading-[1.6] text-blue-200 text-justify">
+    Yet recovery is possible. Reclamation programs are replanting trees, reshaping slopes, and
+    restoring water flow across parts of the mining corridor. Some abandoned pits are being
+    transformed into managed wetlands that support new habitats and filter runoff. Each patch of
+    regrown vegetation represents hope—a sign that the landscape can heal.
+  </p>
+  
+  <div className="flex justify-center mt-6">
+    <figure className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
+      <ImageWithFallback
+        src={reklamasiJPG}
+        className="rounded-xl shadow-lg w-full md:w-[48rem] max-w-full"
+        alt="Reclamation efforts"
+      />
+      <figcaption className="text-center mt-4 text-sm leading-[1.6] text-blue-200 max-w-[600px] mx-auto">
+        Reclamation activities at a post-mining site in Indonesia (Agincourt Resources, 2023).
+      </figcaption>
+    </figure>
     </div>
-    </div>
+  </div>
 
     {/* Restoration */}
     <p className="text-xl leading-[1.6] text-blue-200 text-justify">
