@@ -1554,7 +1554,7 @@ Over time, the changing patterns of the water area reveal more than temporary fl
     </ResponsiveContainer>
             </div>
             <div className="px-5 pb-5 text-center text-sm leading-relaxed text-blue-900/70">
-              The area estimate is derived from the segmentation of green areas in each 
+              The area estimate is derived from the segmentation of water areas in each 
               <p>
                 image against the total study area (7,311 ha).
                 </p>
