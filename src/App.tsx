@@ -2011,7 +2011,15 @@ By layering NDVI over radar imagery, we can see not only where the mine grows, b
                     </p>
                     <Badge variant="outline">Training</Badge>
                   </div>
-
+                    <div className="p-4 bg-yellow-50 rounded-lg">
+                    <h4 className="font-medium mb-2">
+                      ARSET - Creating and Using Normalized Difference Vegetation Index (NDVI) from Satellite Imagery
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-2">
+(2016). ARSET - Creating and Using Normalized Difference Vegetation Index (NDVI) from Satellite Imagery. NASA Applied Remote Sensing Training Program (ARSET). https://appliedsciences.nasa.gov/get-involved/training/english/arset-creating-and-using-normalized-difference-vegetation-index-ndvi
+                    </p>
+                    <Badge variant="outline">Training</Badge>
+                  </div>
                   <div className="p-4 bg-green-50 rounded-lg">
                     <h4 className="font-medium mb-2">
                       SAR Flood & Subsidence Monitoring
