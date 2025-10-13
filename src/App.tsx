@@ -761,14 +761,6 @@ export default function App() {
                 <p className="text-sm text-gray-500">
                   Coal Mining's Environmental Impact | From The
                   Ashes (Credit: National Geographic)
-                  <a
-                    href="https://www.youtube.com/watch?v=ynN39sfqT8w"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    Original Video
-                  </a>
                 </p>
               </div>
             </div>
