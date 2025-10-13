@@ -760,7 +760,7 @@ export default function App() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-500">
                   Coal Mining's Environmental Impact | From The
-                  Ashes. Source:{" "}
+                  Ashes. Source:{" "}. (Credit: National Geographic)
                   <a
                     href="https://www.youtube.com/watch?v=ynN39sfqT8w"
                     target="_blank"
@@ -1736,7 +1736,7 @@ Beyond visualization, these expanding pit lakes pose environmental risks. When u
       <img src={kasianJPG} className="rounded-xl shadow-lg" alt="Flood rescue operation" />
         <div className="text-center mt-4">
     <p className="text-sm leading-[1.6] text-blue-200 max-w-[200px] mx-auto">
-Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
+Evacuation during the 2021 Satui flood (Credit: Republika.co.id)
     </p>
   </div>
       </div>
@@ -1753,7 +1753,7 @@ Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
       <div className="text-center mt-4">
     <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
 Collapsed houses near a mining pit in Satui, 
-<p> South Kalimantan (Jejakrekam.com, 2022).</p>
+<p> South Kalimantan (Credit: Jejakrekam.com)</p>
     </p>
   </div>
     </div>
@@ -1769,7 +1769,7 @@ Collapsed houses near a mining pit in Satui,
       <img src={reklamasiJPG} className="rounded-xl shadow-lg w-full md:w-3/4" alt="Reclamation efforts" />
         <div className="text-center mt-4">
     <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
- Reclamation activities at a post-mining site in Indonesia (Agincourt Resources, 2023).
+ Reclamation activities at a post-mining site in Indonesia (Credit: Agincourt Resources)
     </p>
   </div>
       </div>
@@ -1922,7 +1922,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        SAR Frequency Bands (Credit: NASA SAR Handbook)
+                        Understanding NDVI (Credit: MapScaping)
                       </p>
                     </div>
                   </div>
@@ -1936,7 +1936,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        SAR Frequency Bands (Credit: NASA SAR Handbook)
+                        NDVI interpretation for vegetation health (Credit: Handal Selaras)
                       </p>
                     </div>
                   </div>
