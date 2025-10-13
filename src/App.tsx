@@ -1515,7 +1515,7 @@ Over time, the changing patterns of the water area reveal more than temporary fl
  <div className="rounded-xl border border-black/5 bg-white shadow-lg">
   <div className="border-b border-black/5 px-5 py-4">
     <h3 className="text-lg text-center font-semibold text-slate-900">
-      Open-Pit Area & Year-over-Year Change (2015–2025)
+      Water Area & Year-over-Year Change (2015–2025)
     </h3>
     <p className="text-sm text-center text-slate-500">
       Bar: Total seasonal water area (ha), Line: annual change (Δ ha).
