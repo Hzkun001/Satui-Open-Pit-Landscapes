@@ -9,9 +9,9 @@ import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import timeSeriesGif from "@/image/time-series-new.gif";
 import vegetationGif from "@/image/vegetation.gif"; 
-import rumahRoboh from "@/image/rumah_roboh.jpeg"; 
-import kasian from "@/image/kasian.jpg"; 
-import reklamasi from "@/image/reklamasi.jpg"; 
+import rumahRobohJPEG from "@/image/rumah_roboh.jpeg"; 
+import kasianJPG from "@/image/kasian.jpg"; 
+import reklamasiJPG from "@/image/reklamasi.jpg"; 
 import {
   floodingAerial,
   roadDamage,
@@ -1731,7 +1731,10 @@ Beyond visualization, these expanding pit lakes pose environmental risks. When u
     {/* Image grid */}
     <div className="grid md:grid-cols-2 gap-6 mb-12">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-      <ImageWithFallback src={kasian} className="rounded-xl shadow-lg" alt="Flood rescue operation" />
+      <ImageWithFallback 
+        src={kasianJPG} 
+        className="rounded-xl shadow-lg" 
+        alt="Flood rescue operation" />
         <div className="text-center mt-4">
     <p className="text-sm leading-[1.6] text-blue-200 max-w-[200px] mx-auto">
 Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
@@ -1747,7 +1750,10 @@ Evacuation during the 2021 Satui flood (Republika.co.id, 2021).
         Abandoned pits often collect acidic, metal-rich water, slowly poisoning the soil and nearby rivers. Over time, these stagnant pools accumulate sediments and heavy metals, altering groundwater chemistry and reducing the fertility of surrounding land. These dark patches, clearly visible from space mark the long-term scars of extraction and neglected reclamation. Without proper intervention, they threaten aquatic ecosystems, spread pollutants downstream, and disrupt the natural flow of rivers. What remains is not just a scar on the landscape, but a lingering environmental hazard that persists long after mining operations cease, silently shaping the lives and livelihoods of those who remain nearby.
     </p>
     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-    <ImageWithFallback src={rumahroboh} className="rounded-xl shadow-lg" alt="Collapsed house near mining pit" />
+    <ImageWithFallback 
+      src={rumahrobohJPEG} 
+      className="rounded-xl shadow-lg" 
+      alt="Collapsed house near mining pit" />
       <div className="text-center mt-4">
     <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
 Collapsed houses near a mining pit in Satui, 
@@ -1764,7 +1770,10 @@ Collapsed houses near a mining pit in Satui,
 <br></br>
     <div className="flex justify-center">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl">
-      <ImageWithFallback src={reklamasi} className="rounded-xl shadow-lg w-full md:w-3/4" alt="Reclamation efforts" />
+      <ImageWithFallback 
+        src={reklamasiJPG} 
+        className="rounded-xl shadow-lg w-full md:w-3/4" 
+        alt="Reclamation efforts" />
         <div className="text-center mt-4">
     <p className="text-sm leading-[1.5] text-blue-200 max-w-[600px] mx-auto">
  Reclamation activities at a post-mining site in Indonesia (Agincourt Resources, 2023).
