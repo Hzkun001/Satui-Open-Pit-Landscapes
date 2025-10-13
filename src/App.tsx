@@ -1883,7 +1883,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        Radar Polarization Configurations (H = Horizontal, V = Vertical)
+                        Radar Polarization Configurations (H = Horizontal, V = Vertical) (Credit: NASA SAR Handbook)
                       </p>
                     </div>
                   </div>
@@ -1898,7 +1898,7 @@ Common in areas with dense vegetation, where radar waves are repeatedly scattere
                     />
                     <div className="mt-4 text-center">
                       <p className="text-xs text-gray-500">
-                        SAR Scattering Mechanisms in Forest Environments
+                        SAR Scattering Mechanisms in Forest Environments (Credit: NASA SAR Handbook)
                       </p>
                     </div>
                   </div>
