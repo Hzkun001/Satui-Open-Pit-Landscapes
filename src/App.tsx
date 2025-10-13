@@ -1808,7 +1808,7 @@ Collapsed houses near a mining pit in Satui,
                 </div>
 
                 {/* Right Column - Text Content */}
-                <div className="space-y-6 text-gray-200 text-justify leading-relaxed">
+                <div className="text-base md:text-xl lg:text-2xl space-y-6 text-gray-200 leading-relaxed text-justify">
                   <p>
 Synthetic Aperture Radar (SAR) emits microwave signals and records their reflections (backscatter), which are influenced by surface roughness, moisture, and the radar’s incidence angle. Its key advantage is that SAR does not depend on sunlight and can penetrate thick clouds, enabling Earth observation both day and night. This makes it highly suitable for Satui, which is almost always cloud-covered during the rainy season.
                   </p>
@@ -1829,7 +1829,7 @@ In this project, we used Sentinel-1 C-band (VV polarization) data on Google Eart
               {/* 2 Column Layout: Text Left, Image Right */}
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 {/* Left Column - Text Content */}
-                <div className="space-y-6 text-gray-200 text-justify leading-relaxed">
+                <div className="text-base md:text-xl lg:text-2xl space-y-6 text-gray-200 leading-relaxed text-justify">
                   <p>
 The Sentinel-1 radar emits microwaves and records their reflections with different polarizations, combinations of horizontal and vertical orientations of the transmitted and received waves (e.g., HH, HV, VV). In this project, we used the C-band VV polarization, where the wave is transmitted and received vertically. Each polarization produces distinct interaction characteristics with the Earth’s surface, helping to distinguish features in the mining landscape.                  </p>
 
