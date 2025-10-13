@@ -8,6 +8,7 @@ import { Badge } from "./components/ui/badge";
 import { Progress } from "./components/ui/progress";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import timeSeriesGif from "@/image/time-series-new.gif";
+import vegetationGif from "@/image/vegetation.gif"; 
 import {
   floodingAerial,
   roadDamage,
@@ -98,6 +99,21 @@ export default function App() {
   { year: 2023, pitHa: 290.07, deltaHa: -30.40 },
   { year: 2024, pitHa: 277.57, deltaHa: -12.50 },
   { year: 2025, pitHa: 265.11, deltaHa: -12.46 },
+];
+
+  // Story steps for sidecar scrollytelling - Now with 3 slides only
+  const pitData1 = [
+  { year1: 2015, pitHa1: 4044, deltaHa1: null as number | null },
+  { year1: 2016, pitHa1: 3936, deltaHa1: -108 },
+  { year1: 2017, pitHa1: 3866, deltaHa1: -70 },
+  { year1: 2018, pitHa1: 3733, deltaHa1: -133 },
+  { year1: 2019, pitHa1: 3621, deltaHa1: -112 },
+  { year1: 2020, pitHa1: 3520, deltaHa1: -101 },
+  { year1: 2021, pitHa1: 3460, deltaHa1: -60 },
+  { year1: 2022, pitHa1: 3509, deltaHa1: 49 },
+  { year1: 2023, pitHa1: 3582, deltaHa1: 73 },
+  { year1: 2024, pitHa1: 3575, deltaHa1: -7 },
+  { year1: 2025, pitHa1: 3393, deltaHa1: -182 },
 ];
 
   const storySteps = [
@@ -1332,11 +1348,129 @@ Compared to 2015, the 2025 image shows clear pit expansion: bright areas have wi
         
 
         {/* Transition Block: Land Change → Seasonal Water */}
+       <div className="max-w-5xl mx-auto">
+        <p className="text-xl leading-[1.6] text-gray-600 text-justify">
+Continuing the story of land change, this panel is like a vegetation diary over the past decade. The green bars record how much green area remains each year, while the Δ ha YoY line tracks the sometimes sharp, sometimes smoother fluctuations, traces that could be related to mining rhythms, rehabilitation efforts, or changing seasons. With these two perspectives, we see not just the big trends but also the smaller moments that shape them, resulting in a more comprehensive and data-driven reading.     </p>
+      </div>
+      <br></br> 
+      <br></br>
+             {/* 2 Column Layout: Text Left, Image Right */}
+  {/* ✅ NEW WRAPPER: tambah padding kiri-kanan & batasi lebar */}
+  <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl flex flex-col items-center">
+  {/* Gambar */}
+          
+               {/* Legend – Vegetation vs Non-vegetation */}
+{/* Legend – Vegetation vs Non-vegetation (custom fill colors) */}
+<div className="absolute top-2 left-4 bg-white/95 backdrop-blur-sm text-gray-900 px-4 py-3 rounded-lg text-xs border border-gray-200 shadow-lg">
+  <p className="text-[11px] font-semibold mb-2">Land Cover Classification</p>
+
+  {/* Vegetation */}
+  <div className="flex items-center justify-between gap-3 mb-2">
+    <div className="flex items-center gap-2">
+      {/* chip kiri */}
+      <span
+        className="inline-block w-4 h-4 rounded-sm border"
+        style={{ backgroundColor: '#1ba351ff', borderColor: '#14833fff' }}
+        aria-hidden
+      />
+      <span className="text-gray-800">Vegetation</span>
+    </div>
+    {/* kotak warna kanan */}
+  </div>
+
+  {/* Non-vegetation / Open-pit */}
+  <div className="flex items-center justify-between gap-3">
+    <div className="flex items-center gap-2">
+      <span
+        className="inline-block w-4 h-4 rounded-sm border border-gray-300 bg-white"
+        aria-hidden
+      />
+      <span className="text-gray-800">Non-vegetation</span>
+    </div>
+  </div>
+</div>
+
+
+  <div className="inline-block rounded-xl overflow-hidden border border-white/20 shadow-lg">
+    <ImageWithFallback
+      src={vegetationGif}
+      alt="Time-series animation showing vegetation change"
+      className="w-full h-auto rounded-xl shadow-lg mx-auto"
+    />
+  </div>
+  
+
+  {/* Caption */}
+  <div className="text-center mt-4">
+    <p className="text-sm leading-[1.5] text-gray-600 max-w-[600px] mx-auto">
+Animated NDVI time-series of annual vegetation change in the </p>
+<p className="text-sm leading-[1.5] text-gray-600 max-w-[600px] mx-auto">Satui open-pit landscapes (2015–2025).</p>
+  </div>
+</div>
+      </div>
+      {/* Left Column - Text Content */}
+            {/* Right Column - SAR Backscatter Image */}
+ <div className="rounded-xl border border-black/5 bg-white shadow-lg">
+  <div className="border-b border-black/5 px-5 py-4">
+    <h3 className="text-lg text-center font-semibold text-slate-900">
+      Vegetation Area & Year-over-Year Change (2015–2025)
+    </h3>
+    <p className="text-sm text-center text-slate-500">
+      Bar: Vegetation area (ha), Line: annual change (Δ ha).
+    </p>
+  </div>
+
+  {/* 👉 beri tinggi eksplisit di container Recharts */}
+  <div className="w-full p-4">
+    <ResponsiveContainer width="100%" height={320}>
+      <ComposedChart data={pitData1} margin={{ top: 10, right: 20, bottom: 10, left: 0 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="year1" tick={{ fontSize: 12 }} tickMargin={6} interval={0} />
+        <YAxis yAxisId="left" tick={{ fontSize: 12 }} tickFormatter={(v) => `${v} ha`} />
+        <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12 }} tickFormatter={(v) => `${v} ha`} />
+        <Tooltip
+          formatter={(val: any, name: string) =>
+            name.includes("Δ")
+              ? [`${Number(val).toFixed(2)} ha`, "Δ From the previous year"]
+              : [`${Number(val).toFixed(2)} ha`, "Vegetation area"]
+          }
+          labelFormatter={(label) => `${label}`}
+        />
+        <Legend />
+        {/* warna agar kontras */}
+        <Bar yAxisId="left" dataKey="pitHa1" name="Vegetation area (ha)" radius={[6, 6, 0, 0]} fill="#1ba351ff" />  
+        <Line
+  yAxisId="right"
+  type="monotone"
+  dataKey="deltaHa1"
+  name="Δ ha (YoY)"
+  dot={{ r: 3 }}
+  strokeWidth={2}
+  stroke="#1f3726ff"
+/>
+      </ComposedChart>
+    </ResponsiveContainer>
+            </div>
+            <div className="px-5 pb-5 text-center text-sm leading-relaxed text-blue-900/70">
+              The area estimate is derived from segmenting green (vegetation).
+              <p>
+               pixels within each image against the total study area (7,311 ha).
+                </p>
+            </div>
+            <br></br>
+          </div>
+    </div>
+  </div>
+
+        {/* Transition Block: Land Change → Seasonal Water */}
         <div className="relative bg-white py-1 md:py-1">
           <div className="max-w-4xl mx-auto px-4 md:px-6">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8 shadow-lg">
               <p className="text-base md:text-lg text-gray-800 leading-relaxed text-justify">
-Pit expansion and new overburden piles not only reshape the surface, the resulting depth and contours also retain rainwater. After identifying where land has been cleared, the next step is to trace how water fills those depressions throughout the seasons. SAR distinguishes rough surfaces (exposed ground) from calm surfaces (water).              </p>
+From the identified vegetation losses, pit growth and overburden placement emerge as key drivers. These changes do not just alter the land, the new depths and contours retain rainfall. The next step is to track how those basins fill through the seasons, using SAR to separate rough, exposed ground from smooth water surfaces.    </p>
             </div>
           </div>
         </div>
