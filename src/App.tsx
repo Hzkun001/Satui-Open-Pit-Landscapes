@@ -2122,7 +2122,7 @@ By layering NDVI over radar imagery, we can see not only where the mine grows, b
                       Google Earth Engine (GEE)
                     </h4>
                     <p className="text-sm text-gray-600 mb-2">
-                      Cloud platform for Sentinel-1 C-band (VV) processing, median composites, Otsu water masks, Wet/Dry frequency, Δ(Wet−Dry), and raster/vector export.
+                      Cloud platform for Sentinel-1 C-band (VV) processing, median composites, Otsu water masks, NDVI-based vegetation detection, Wet/Dry frequency analysis, Δ(Wet−Dry), and raster/vector export.
                     </p>
                     <div className="flex space-x-2">
                       <Badge variant="outline">Platform</Badge>
