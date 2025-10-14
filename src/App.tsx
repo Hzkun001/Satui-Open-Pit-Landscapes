@@ -2149,7 +2149,7 @@ By layering NDVI over radar imagery, we can see not only where the mine grows, b
                       Sentinel-1 GRD (COPERNICUS/S1_GRD)
                     </h4>
                     <p className="text-sm text-gray-600 mb-2">
-                      SAR C-band (IW, GRD) dataset used for all VV (and VH) backscatter analyses.
+                      SAR C-band (IW, GRD) dataset used for all VV backscatter analyses.
                     </p>
                     <div className="flex space-x-2">
                       <Badge variant="outline">Dataset</Badge>
