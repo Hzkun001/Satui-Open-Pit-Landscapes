@@ -383,8 +383,8 @@ export default function App() {
               entries.forEach((entry) => {
                 if (
                   entry.isIntersecting &&
-                  entry.intersectionRatio > 0.4 &&
-                  index < storySteps.length
+                  index < storySteps.length &&
+                  entry.intersectionRatio >= 0.15
                 ) {
                   // Add slight delay for smoother transitions
                   requestAnimationFrame(() => {
@@ -394,8 +394,8 @@ export default function App() {
               });
             },
             {
-              threshold: [0.2, 0.4, 0.6, 0.8],
-              rootMargin: "-15% 0px -55% 0px",
+              threshold: [0, 0.15, 0.3, 0.6, 0.85],
+              rootMargin: "-10% 0px -20% 0px",
             },
           );
           observer.observe(ref);
