@@ -384,7 +384,7 @@ export default function App() {
                 if (
                   entry.isIntersecting &&
                   index < storySteps.length &&
-                  entry.intersectionRatio >= 0.15
+                  entry.intersectionRatio >= 0.20
                 ) {
                   // Add slight delay for smoother transitions
                   requestAnimationFrame(() => {
