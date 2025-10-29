@@ -1175,7 +1175,7 @@ Compared to 2015, the 2025 image shows clear pit expansion: bright areas have wi
                     <div className="inline-flex items-center space-x-3 bg-blue-100 text-blue-700 px-6 py-3 rounded-full border border-blue-200 shadow-sm">
                       <Eye className="w-5 h-5" />
                       <span className="text-sm font-medium">
-                        Click the dots to explore each stage of the evolution.
+                        Scroll down to explore each stage of the evolution.
                       </span>
                     </div>
                   </div>
