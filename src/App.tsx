@@ -14,6 +14,7 @@ import kasianJPG from "@/image/kasian.jpg";
 import reklamasiJPG from "@/image/reklamasi.jpg";
 import ndviPNG from "@/image/ndvi.png"; 
 import lowHighPNG from "@/image/low-high-ndvi.jpg"; 
+import Scatter from "@/image/scatter.jpg";
 import {
   floodingAerial,
   roadDamage,
@@ -805,7 +806,7 @@ By interpreting the patterns of signal reflections, we can reveal landscape chan
             <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                 <ImageWithFallback
-                  src={sarBackscatterImage}
+                  src={Scatter}
                   alt="Understanding SAR Backscatter Patterns - Visual diagram showing the relationship between surface types and radar backscatter intensity, from high backscatter (bright areas like exposed surfaces) to low backscatter (dark areas like water bodies)"
                   className="w-full h-auto object-contain"
                   loading="lazy"
